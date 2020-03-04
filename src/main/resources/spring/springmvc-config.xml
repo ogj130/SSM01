@@ -10,12 +10,22 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
 
+    <!--注解-->
+    <mvc:annotation-driven/>
+    <!--处理静态资源-->
+    <mvc:default-servlet-handler/>
+    <mvc:resources mapping="/js/**" location="/WEB-INF/js/"/>
+    <mvc:resources mapping="/css/**" location="/WEB-INF/css/"/>
+    <mvc:resources mapping="/img/**" location="/WEB-INF/img/"/>
+
+
     <context:component-scan base-package="com.spring.controller"/>
+
     <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages"/>
         <property name="suffix" value=""/>
     </bean>
-    <mvc:annotation-driven/>
+
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
@@ -25,5 +35,7 @@
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="maxUploadSize" value="10485760"/>
     </bean>
+
+
 
 </beans>

@@ -12,5 +12,8 @@
 </head>
 <body>
 Hello Spring MVC!
+<script>
+    window.location.href="user/toLogin.action";
+</script>
 </body>
 </html>

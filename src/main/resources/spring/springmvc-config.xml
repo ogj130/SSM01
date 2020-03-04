@@ -19,7 +19,8 @@
     <mvc:resources mapping="/img/**" location="/WEB-INF/img/"/>
 
 
-    <context:component-scan base-package="com.spring.controller"/>
+    <context:component-scan base-package="com.spring.controller,com.spring.Serviceimpl,
+    com.spring.Service,com.spring.Daoimpl,com.spring.Dao"/>
 
     <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages"/>

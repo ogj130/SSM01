@@ -3,6 +3,7 @@ package com.test;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.junit.Before;
 import org.junit.Test;
+import org.omg.CORBA.PUBLIC_MEMBER;
 
 import java.sql.Connection;
 
@@ -17,5 +18,6 @@ public class TestCombo {
         connection.close();
         System.out.println("连接："+DataSource.getConnection());
     }
+
 
 }

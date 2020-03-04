@@ -17,6 +17,7 @@
     com.spring.Service,com.spring.Serviceimpl"/>
     <!--扫描Controller-->
     <context:component-scan base-package="com.spring.controller"/>
+    <context:component-scan base-package="com.spring"/>
 
 
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
